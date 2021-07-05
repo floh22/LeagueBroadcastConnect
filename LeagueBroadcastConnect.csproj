@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyVersion>1.0.101.0</AssemblyVersion>
+    <FileVersion>1.0.101.21170</FileVersion>
+    <ApplicationIcon>Assets\lbc_icon.ico</ApplicationIcon>
+    <Authors>Lars Eble</Authors>
+    <Description>Static File connector for League Broadcast (Essence)</Description>
+    <Copyright>CC BY 4.0</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
+</Project>
