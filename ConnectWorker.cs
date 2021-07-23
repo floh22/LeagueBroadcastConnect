@@ -155,7 +155,7 @@ namespace LeagueBroadcastConnect
                     {
                         if(i >= received.stateData.scoreboard.BlueTeam.Dragons.Count)
                         {
-                            blueDrakesOut[i] = "none";
+                            blueDrakesOut[i] = "None";
                             continue;
                         }
                         blueDrakesOut[i] = received.stateData.scoreboard.BlueTeam.Dragons[i];
@@ -175,7 +175,7 @@ namespace LeagueBroadcastConnect
                     {
                         if (i >= received.stateData.scoreboard.RedTeam.Dragons.Count)
                         {
-                            redDrakesOut[i] = "none";
+                            redDrakesOut[i] = "None";
                             continue;
                         }
                         redDrakesOut[i] = received.stateData.scoreboard.RedTeam.Dragons[i];
@@ -185,6 +185,8 @@ namespace LeagueBroadcastConnect
                     converted.redDrake2 = redDrakesOut[2];
                     converted.redDrake3 = redDrakesOut[3];
 
+                    converted.drakeTimer = $"{(int)Math.Floor(received.stateData.dragon.SpawnTimer / 60)}:{(int)Math.Floor(received.stateData.dragon.SpawnTimer % 60):D2}";
+                    converted.baronTimer = $"{(int)Math.Floor(received.stateData.baron.SpawnTimer / 60)}:{(int)Math.Floor(received.stateData.baron.SpawnTimer % 60):D2}";
                 }
                
 
@@ -216,6 +218,9 @@ namespace LeagueBroadcastConnect
                         File.Copy(Path.Combine(dragonIconLocation, converted.redDrake2 + ".png"), Path.Combine(_options.Path, "redDrake2.png"), true);
                         File.Copy(Path.Combine(dragonIconLocation, converted.redDrake3 + ".png"), Path.Combine(_options.Path, "redDrake3.png"), true);
                     }
+
+                    WritePropertyToFile("drakeTimer", converted.drakeTimer);
+                    WritePropertyToFile("baronTimer", converted.baronTimer);
                 } else
                 {
                     //Single File

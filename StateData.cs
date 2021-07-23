@@ -51,7 +51,6 @@ namespace LeagueBroadcastConnect
 
         public InfoSidePage infoPage;
 
-        public string uiColor;
         public string blueColor;
         public string redColor;
     }
@@ -136,6 +135,8 @@ namespace LeagueBroadcastConnect
         public ObjectiveType Type { get; set; }
 
         public float GoldDifference { get; set; }
+
+        public double SpawnTimer { get; set; }
 
     }
 
