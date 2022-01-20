@@ -13,11 +13,12 @@
 [![MIT License][license-shield]][license-url]
 [![Donate][donate-paypal]](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZSY2FXPUHXVUJ)
 
+### Development and maintenance of this project has stopped. Compatability with LeagueBroadcast cannot be garanteed. If you wish to continue development of this project, please let me know.
 
 <!-- ABOUT THE PROJECT -->
 ## League Broadcast Connect
 
-This is an addon for [League Broadcast (Essence)](https://github.com/floh22/LeagueBroadcastHub) that allows game information to be saved to file while a game is running.
+This is an addon for [League Broadcast ](https://github.com/floh22/LeagueBroadcast) that allows game information to be saved to file while a game is running.
 This is useful for those that wish to use the information in their own overlays when using broadcast software such as vmix.
 
 ## Features
